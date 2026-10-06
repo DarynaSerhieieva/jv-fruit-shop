@@ -13,6 +13,8 @@ public class PurchaseOperation implements OperationHandler {
 
         if (currentAmount >= amount) {
             Storage.fruits.put(name, currentAmount - amount);
+        } else {
+            throw new RuntimeException("Not enough " + name + " current amount " + currentAmount);
         }
     }
 }
