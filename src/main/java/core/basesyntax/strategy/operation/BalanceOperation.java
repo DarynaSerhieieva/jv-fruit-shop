@@ -4,7 +4,7 @@ import core.basesyntax.db.Storage;
 
 public class BalanceOperation implements OperationHandler {
     @Override
-    public void get(String name, int amount) {
+    public void getOperation(String name, int amount) {
         Storage.fruits.put(name, amount);
     }
 }

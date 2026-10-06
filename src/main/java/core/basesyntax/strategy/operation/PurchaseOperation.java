@@ -4,7 +4,7 @@ import core.basesyntax.db.Storage;
 
 public class PurchaseOperation implements OperationHandler {
     @Override
-    public void get(String name, int amount) {
+    public void getOperation(String name, int amount) {
         if (!Storage.fruits.containsKey(name)) {
             throw new RuntimeException(name + " are not currently on sale.");
         }
